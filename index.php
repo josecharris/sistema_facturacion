@@ -5,7 +5,7 @@ require 'functions.php';
 
 //comprobar session
 if (!isset($_SESSION['usuario'])) {
-	header('Location: '.RUTA.'login.php');
+	header('Location: '.RUTA.'principal.php');
 }
 
 //Validad los datos por privilegios
@@ -19,7 +19,7 @@ if ($tipo == "ADMINISTRADOR") {
 }elseif ($tipo == "USUARIO") {
 	header("Location: ".RUTA."usuario.php");
 }else{
-	header("Location: ".RUTA."login.php");
+	header("Location: ".RUTA."principal.php");
 }
 
 
