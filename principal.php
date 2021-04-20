@@ -1,12 +1,9 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js" lang=""> 
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Newline CSS Template with a video background</title>
+        <title>Administración</title>
 <!--
 Newline Template
 http://www.templatemo.com/tm-503-newline
@@ -28,11 +25,7 @@ http://www.templatemo.com/tm-503-newline
 
         <div class="overlay"></div>
         <section class="top-part">
-          <video controls autoplay loop>
-            <source src="videos/video.mp4" type="video/mp4">
-            <source src="videos/video.ogg" type="video/ogg">
-          Your browser does not support the video tag.
-          </video>
+          <img src="videos/wall.jpg">
         </section>
         
         <section class="cd-hero">
@@ -41,11 +34,11 @@ http://www.templatemo.com/tm-503-newline
             <nav>
               <span class="cd-marker item-1"></span>
               <ul>
-                <li class="selected"><a href="#0"><div class="image-icon"><img src="img/home-icon.png"></div><h6>Welcome</h6></a></li>
-                <li><a href="#0"><div class="image-icon"><img src="img/about-icon.png"></div><h6>About Us</h6></a></li>
-                <li><a href="#0"><div class="image-icon"><img src="img/featured-icon.png"></div><h6>Featured</h6></a></li>
-                <li><a href="#0"><div class="image-icon"><img src="img/projects-icon.png"></div><h6>Projects</h6></a></li>
-                <li><a href="#0"><div class="image-icon"><img src="img/contact-icon.png"></div><h6>Contact Us</h6></a></li>
+                <li class="selected"><a href="#0"><div class="image-icon"><img src="img/home-icon.png"></div><h6>Empresa</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/about-icon.png"></div><h6>Descripción</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/featured-icon.png"></div><h6>Productos</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/projects-icon.png"></div><h6>Login</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/contact-icon.png"></div><h6>Contacto</h6></a></li>
               </ul>
             </nav> 
           </div> <!-- .cd-slider-nav -->
@@ -54,8 +47,10 @@ http://www.templatemo.com/tm-503-newline
 
             <li class="selected">
               <div class="heading">
-                <h1>NEWLINE</h1>
-                <span>Welcome To Web Design Agency</span>
+                <div>
+                  <img src="videos/logo.jpeg" style="width: 30%; height: 120px;">
+                </div>
+                <span>Dedicación, maduración y calidad</span>
               </div>
               <div class="cd-full-width first-slide">
                 <div class="container">
@@ -161,8 +156,8 @@ http://www.templatemo.com/tm-503-newline
 
             <li>
               <div class="heading">
-                <h1>Our projects</h1>
-                <span>Here you can check our recent projects</span> 
+                <h1>Panel de administración</h1>
+                <span>Ingreso al sistema</span> 
               </div>
               <div class="cd-half-width fourth-slide">
                 <div class="container">
@@ -170,30 +165,9 @@ http://www.templatemo.com/tm-503-newline
                     <div class="col-md-12">
                       <div class="content fourth-content">
                         <div class="row">
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-01.jpg" data-lightbox="image-1"><img src="img/project-item-01.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-02.jpg" data-lightbox="image-1"><img src="img/project-item-02.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-03.jpg" data-lightbox="image-1"><img src="img/project-item-03.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-04.jpg" data-lightbox="image-1"><img src="img/project-item-04.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-05.jpg" data-lightbox="image-1"><img src="img/project-item-05.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-06.jpg" data-lightbox="image-1"><img src="img/project-item-06.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-07.jpg" data-lightbox="image-1"><img src="img/project-item-07.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-08.jpg" data-lightbox="image-1"><img src="img/project-item-08.jpg"></a>
-                          </div>
+                          <?php
+                            require 'login.php';
+                          ?>  
                         </div>
                       </div>
                     </div>

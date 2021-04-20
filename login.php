@@ -1,5 +1,4 @@
 <?php 
-session_start();
 
 require 'admin/config.php';
 require 'functions.php';
@@ -13,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 	$conexion = conexion($bd_config);
-	$statement = $conexion->prepare('SELECT * FROM users WHERE user_name=:usuario AND user_pass=:password');
+	$statement = $conexion->prepare('SELECT * FROM user WHERE username=:usuario AND passw=:password');
 	$statement->execute([
 		':usuario' => $usuario,
 		':password' => $pass
@@ -23,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if ($resultado != false) {
 		$_SESSION['usuario'] = $usuario;
 		$_SESSION['type_user'] = $resultado['type_user'];
-		header('Location: '.RUTA.'index.php');
+		header('Location: '.RUTA.'admin.php');
 		
 	}else{
 		$errores = '<li class="error">Tu usuario o contraseña son incorrectos</li>';

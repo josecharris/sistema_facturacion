@@ -9,13 +9,11 @@
 </head>
 <body>
 	<div class="container">
-		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+		<form action="<?php echo htmlspecialchars('login.php'); ?>" method="post">
 			<div class="input-group">
-				<i class="fa fa-user-o icons"></i>
 				<input type="text" class="form-control" name="usuario" placeholder="Usuario">
 			</div>
 			<div class="input-group">
-				<i class="fa fa-lock icons"></i>
 				<input type="password" class="form-control" name="password" placeholder="Contraseña">
 			</div>
 
@@ -25,10 +23,10 @@
 				<?php endif; ?>
 			</ul>
 
-			<button type="submit" name="submit" class="btn btn-flat-green">Ingresar</button>
+			<button type="submit" name="submit" class="btn btn-warning">Ingresar</button>
 		</form>
 
-		<a href="<?php echo RUTA. 'registro.php' ?>" class="login-link">¿No tienes cuenta?</a>
+		<a href="<?php echo RUTA. 'registro.php' ?>" class="login-link" style="color: yellow;">¿No tienes cuenta?</a>
 	</div>
 </body>
 </html>

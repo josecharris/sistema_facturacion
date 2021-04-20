@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}else{
 		//Validacion de que el usuario no exista.
 		$conexion = conexion($bd_config);
-		$statement = $conexion->prepare('SELECT * FROM users WHERE user_name = :usuario LIMIT 1');
+		$statement = $conexion->prepare('SELECT * FROM user WHERE username = :usuario LIMIT 1');
 		$statement->execute([
 			':usuario' => $usuario
 		]);
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	if ($errores == '') {
 		$conexion = conexion($bd_config);
-		$statement = $conexion->prepare("INSERT INTO users (user_name, user_pass, type_user) VALUES (:usuario, :pass, :type)");
+		$statement = $conexion->prepare("INSERT INTO user (username, passw, type_user) VALUES (:usuario, :pass, :type)");
 		$statement->execute([
 			':usuario'=>$usuario,
 			':pass'=> $pass,
